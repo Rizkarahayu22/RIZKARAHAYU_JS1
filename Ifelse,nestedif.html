@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>JavaScript-if else dan nested if</h1>
+
+    <p>Masukkan NIM dan Nilai:</p>
+    <input type="number" id="NIM" placeholder="nim">
+    <input type="number" id="Nilai" placeholder="nilai">
+    <button onclick="cekHasil()">Hasil</button>
+
+    <p id="hasil"></p>
+
+    <script>
+        function cekHasil() {
+            var nim = parseFloat(document.getElementById("NIM").value);
+            var nilai = parseInt(document.getElementById("Nilai").value);
+
+            if (isNaN(nim) || isNaN(nilai)) {
+                document.getElementById("hasil").innerHTML = "Harap masukkan nilai dan usia yang valid.";
+            } else {
+                if (nim >= 210631100053) {
+                    document.getElementById("hasil").innerHTML = "Hallo Rizka!";
+                } else {
+                    document.getElementById("hasil").innerHTML = "Hallo!";
+                }
+
+                if (nilai >= 70) {
+                    if (nilai >= 71) {
+                        document.getElementById("hasil").innerHTML += " Semangat Untuk Semester Selanjutnya!";
+                    } else {
+                        document.getElementById("hasil").innerHTML += " Belajar Lagi Ya Untuk Semester Ini!";
+                    }
+                } else {
+                    document.getElementById("hasil").innerHTML += " Anda Mengulang Untuk Di Semester Depan";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
